@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
+import AuthorCard from 'components/blog/AuthorCard';
+import ArticleHeader from 'components/blog/ArticleHeader';
 import config from 'shared/config';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type Post from 'shared/models/post';
@@ -20,31 +22,16 @@ const BlogPost = ({ post }: PropType) => {
 			<div className="container px-5">
 				<div className="row gx-5">
 					<div className="col-lg-3">
-						<div className="d-flex align-items-center mt-lg-5 mb-4">
-							<img
-								src={post.data.authorImg}
-								className="img-fluid rounded-circle"
-								alt={post.data.author}
-							/>
-							<div className="ms-3">
-								<div className="fw-bold">{post.data.author}</div>
-							</div>
-						</div>
+						<AuthorCard name={post.data.author} image={post.data.authorImg} />
 					</div>
 
 					<div className="col-lg-9">
 						<article>
-							<header className="mb-4">
-								<h1 className="fw-bolder mb-1">{post.data.title}</h1>
-								<div className="text-muted fst-italic mb-2">
-									{post.data.date}
-								</div>
-								{post.data.tags.map((tag: string, index: number) => (
-									<span key={index} className="badge bg-secondary me-1">
-										{tag}
-									</span>
-								))}
-							</header>
+							<ArticleHeader
+								title={post.data.title}
+								date={post.data.date}
+								tags={post.data.tags}
+							/>
 
 							<figure className="mb-4">
 								<img
