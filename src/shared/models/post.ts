@@ -1,0 +1,5 @@
+export default interface Post {
+	slug: string;
+	data: any;
+	content?: string;
+}
