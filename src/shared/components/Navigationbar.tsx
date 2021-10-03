@@ -6,7 +6,7 @@ import config from 'shared/config';
 
 const NavigationBar = () => {
 	return (
-		<Navbar bg="dark" variant="dark" expand="lg">
+		<Navbar bg="primary" variant="dark" expand="lg">
 			<Container>
 				<Link href="/" passHref>
 					<Navbar.Brand>{config.appName}</Navbar.Brand>
