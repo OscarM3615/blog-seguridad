@@ -5,7 +5,7 @@ date: 'Octubre 1, 2021'
 image: 'https://dummyimage.com/600x350/ced4da/6c757d'
 author:
   name: 'Óscar Miranda'
-  image: '/images/author.jpg'
+  image: '/images/author.png'
 tags: ['Test', 'First']
 
 ---

@@ -7,13 +7,13 @@ const About = () => {
 			<Header />
 
 			<section className="py-5 bg-light">
-				<div className="container px-5">
+				<div className="container px-5 my-5">
 					<div className="row gx-5 align-items-center">
 						<div className="col-lg-6">
 							<img
-								src="https://dummyimage.com/600x400/343a40/6c757d"
+								src="/images/password.jpg"
 								className="img-fluid rounded mb-5mb-lg-0"
-								alt=""
+								alt="Password"
 							/>
 						</div>
 						<div className="col-lg-6">
@@ -29,13 +29,13 @@ const About = () => {
 			</section>
 
 			<section className="py-5 bg-light">
-				<div className="container px-5">
+				<div className="container px-5 my-5">
 					<div className="row gx-5 align-items-center">
 						<div className="col-lg-6 order-first order-lg-last">
 							<img
-								src="https://dummyimage.com/600x400/343a40/6c757d"
+								src="/images/tips-y-consejos.jpg"
 								className="img-fluid rounded mb-5mb-lg-0"
-								alt=""
+								alt="Tips y consejos"
 							/>
 						</div>
 						<div className="col-lg-6">
