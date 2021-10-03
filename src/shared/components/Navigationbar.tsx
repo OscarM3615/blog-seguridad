@@ -15,7 +15,7 @@ const NavigationBar = () => {
 				<Navbar.Collapse id="navbar-nav">
 					<Nav className="ms-auto">
 						<Link href="/" passHref>
-							<Nav.Link>Inicio</Nav.Link>
+							<Nav.Link>Blog</Nav.Link>
 						</Link>
 						<Link href="/about" passHref>
 							<Nav.Link>Acerca de</Nav.Link>

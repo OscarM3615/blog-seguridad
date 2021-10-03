@@ -18,7 +18,7 @@ const Home = ({ posts }: PropType) => {
 				<h1 className="fw-bolder fs-3 mb-4">Publicaciones</h1>
 				<div className="row gx-5">
 					{posts.map((post) => (
-						<div key={post.slug} className="col-lg-4 mb-5">
+						<div key={post.slug} className="col-lg-4 col-md-6 mb-5">
 							<PostCard post={post} />
 						</div>
 					))}
