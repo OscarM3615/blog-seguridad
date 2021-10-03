@@ -7,6 +7,7 @@ import ArticleHeader from 'components/blog/ArticleHeader';
 import config from 'shared/config';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type Post from 'shared/models/post';
+import type Frontmatter from 'shared/models/frontmatter';
 
 type ParamType = {
 	slug: string;
@@ -22,7 +23,7 @@ const BlogPost = ({ post }: PropType) => {
 			<div className="container px-5">
 				<div className="row gx-5">
 					<div className="col-lg-3">
-						<AuthorCard name={post.data.author} image={post.data.authorImg} />
+						<AuthorCard author={post.data.author} />
 					</div>
 
 					<div className="col-lg-9">
@@ -80,7 +81,11 @@ export const getStaticProps: GetStaticProps<PropType> = async (context) => {
 
 	return {
 		props: {
-			post: { slug, data, content }
+			post: {
+				slug,
+				data: data as Frontmatter,
+				content
+			}
 		}
 	};
 };

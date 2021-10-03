@@ -1,9 +1,10 @@
+import type Author from 'shared/models/author';
+
 type PropType = {
-	name: string;
-	image: string;
+	author: Author;
 };
 
-const AuthorCard = ({ name, image }: PropType) => {
+const AuthorCard = ({ author: { name, image } }: PropType) => {
 	return (
 		<div className="d-flex align-items-center mt-lg-5 mb-4">
 			<img src={image} className="img-fluid rounded-circle" alt={name} />

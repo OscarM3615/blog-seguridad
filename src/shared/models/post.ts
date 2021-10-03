@@ -1,5 +1,7 @@
+import type Frontmatter from './frontmatter';
+
 export default interface Post {
 	slug: string;
-	data: any;
+	data: Frontmatter;
 	content?: string;
 }

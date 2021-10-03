@@ -6,6 +6,7 @@ import config from 'shared/config';
 import PostCard from 'components/home/PostCard';
 import type { GetStaticProps } from 'next';
 import type Post from 'shared/models/post';
+import type Frontmatter from 'shared/models/frontmatter';
 
 type PropType = {
 	posts: Post[];
@@ -47,7 +48,7 @@ export const getStaticProps: GetStaticProps<PropType> = async () => {
 
 		return {
 			slug,
-			data
+			data: data as Frontmatter
 		};
 	});
 

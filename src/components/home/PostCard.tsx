@@ -6,6 +6,8 @@ type PropType = {
 };
 
 const PostCard = ({ post }: PropType) => {
+	const { author } = post.data;
+
 	return (
 		<div className="card h-100 shadow border-0">
 			<img
@@ -27,12 +29,12 @@ const PostCard = ({ post }: PropType) => {
 				<div className="d-flex align-items-end justify-content-between">
 					<div className="d-flex align-items-center">
 						<img
-							src={post.data.authorImg}
+							src={author.image}
 							className="rounded-circle me-3"
-							alt={post.data.author}
+							alt={author.name}
 						/>
 						<div className="small">
-							<div className="fw-bold">{post.data.author}</div>
+							<div className="fw-bold">{author.name}</div>
 							<div className="text-muted">{post.data.date}</div>
 						</div>
 					</div>
