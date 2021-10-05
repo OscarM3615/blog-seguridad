@@ -37,7 +37,7 @@ const BlogPost = ({ post }: PropType) => {
 							<figure className="mb-4">
 								<img
 									src={post.data.image}
-									className="img-fluid rounded"
+									className="img-fluid rounded w-100"
 									alt={post.data.title}
 								/>
 							</figure>
