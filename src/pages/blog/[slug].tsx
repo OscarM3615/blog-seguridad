@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
 import highlightjs from 'highlight.js';
+import Head from 'next/head';
 import AuthorCard from 'components/blog/AuthorCard';
 import ArticleHeader from 'components/blog/ArticleHeader';
 import config from 'shared/config';
@@ -30,38 +31,46 @@ type PropType = {
 
 const BlogPost = ({ post }: PropType) => {
 	return (
-		<section className="py-5">
-			<div className="container px-5">
-				<div className="row gx-5">
-					<div className="col-lg-3">
-						<AuthorCard author={post.data.author} />
-					</div>
+		<>
+			<Head>
+				<title>
+					{post.data.title} | {config.appName}
+				</title>
+			</Head>
 
-					<div className="col-lg-9">
-						<article>
-							<ArticleHeader
-								title={post.data.title}
-								date={post.data.date}
-								tags={post.data.tags}
-							/>
+			<section className="py-5">
+				<div className="container px-5">
+					<div className="row gx-5">
+						<div className="col-lg-3">
+							<AuthorCard author={post.data.author} />
+						</div>
 
-							<figure className="mb-4">
-								<img
-									src={post.data.image}
-									className="img-fluid rounded w-100"
-									alt={post.data.title}
+						<div className="col-lg-9">
+							<article>
+								<ArticleHeader
+									title={post.data.title}
+									date={post.data.date}
+									tags={post.data.tags}
 								/>
-							</figure>
 
-							<section
-								className="post-content"
-								dangerouslySetInnerHTML={{ __html: marked(post.content) }}
-							/>
-						</article>
+								<figure className="mb-4">
+									<img
+										src={post.data.image}
+										className="img-fluid rounded w-100"
+										alt={post.data.title}
+									/>
+								</figure>
+
+								<section
+									className="post-content"
+									dangerouslySetInnerHTML={{ __html: marked(post.content) }}
+								/>
+							</article>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

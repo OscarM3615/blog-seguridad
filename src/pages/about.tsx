@@ -1,9 +1,15 @@
+import Head from 'next/head';
 import Header from 'components/about/Header';
 import Contact from 'components/about/Contact';
+import config from 'shared/config';
 
 const About = () => {
 	return (
 		<>
+			<Head>
+				<title>Acerca de | {config.appName}</title>
+			</Head>
+
 			<Header />
 
 			<section className="py-5 bg-light">
