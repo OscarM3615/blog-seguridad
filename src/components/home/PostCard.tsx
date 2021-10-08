@@ -10,11 +10,13 @@ const PostCard = ({ post }: PropType) => {
 
 	return (
 		<div className="card h-100 shadow border-0">
-			<img
-				src={post.data.image}
-				className="card-img-top"
-				alt={post.data.title}
-			/>
+			<div className="ratio ratio-4x3">
+				<img
+					src={post.data.image}
+					className="card-img-top object-fit-cover"
+					alt={post.data.title}
+				/>
+			</div>
 
 			<div className="card-body p-4">
 				<Link href={`/blog/${post.slug}`} passHref>
