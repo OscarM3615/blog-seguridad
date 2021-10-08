@@ -1,6 +1,9 @@
 // Override Bootstrap defaults.
 @import './variables';
 
+// Import Highlight.js styles.
+@import '~highlight.js/styles/github.css';
+
 // Import Bootstrap.
 @import '~bootstrap/scss/bootstrap.scss';
 

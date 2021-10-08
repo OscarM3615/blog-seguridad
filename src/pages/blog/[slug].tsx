@@ -2,12 +2,23 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
+import highlightjs from 'highlight.js';
 import AuthorCard from 'components/blog/AuthorCard';
 import ArticleHeader from 'components/blog/ArticleHeader';
 import config from 'shared/config';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type Post from 'shared/models/post';
 import type Frontmatter from 'shared/models/frontmatter';
+
+// Highlight the code blocks.
+marked.setOptions({
+	highlight: (code: string, lang: string): string => {
+		return highlightjs.highlight(code, {
+			// Fallback to plaintext.
+			language: highlightjs.getLanguage(lang) ? lang : 'plaintext'
+		}).value;
+	}
+});
 
 type ParamType = {
 	slug: string;
