@@ -43,7 +43,7 @@ const BlogPost = ({ post }: PropType) => {
 							</figure>
 
 							<section
-								className="fs-5"
+								className="post-content"
 								dangerouslySetInnerHTML={{ __html: marked(post.content) }}
 							/>
 						</article>
