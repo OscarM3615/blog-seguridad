@@ -31,4 +31,15 @@
 			padding: initial;
 		}
 	}
+
+	blockquote {
+		@extend .ps-3, .py-1, .mb-4;
+		border-left: solid 4px $gray-400;
+		font-style: italic;
+		color: $gray-600;
+
+		p {
+			margin-bottom: 0 !important;
+		}
+	}
 }
