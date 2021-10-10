@@ -3,7 +3,11 @@
 	@extend .fs-5;
 
 	p {
-		@extend .mb-4; // Add a large line break on each paragraph.
+		line-height: 1.6;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-block-start: 1em;
 	}
 
 	img {
