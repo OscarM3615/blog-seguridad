@@ -46,4 +46,8 @@
 			margin-bottom: 0 !important;
 		}
 	}
+
+	table {
+		@extend .table, .table-bordered;
+	}
 }
