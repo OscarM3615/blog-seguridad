@@ -1,6 +1,6 @@
 ---
 title: 'Sistema de Detección de Intrusos (IDS) en una red'
-description: ''
+description: 'Funcionamiento de un IDS y sus tipos'
 date: 'Octubre 19, 2021'
 image: '/images/posts/sistema-de-deteccion-de-intrusos-en-una-red.jpg'
 author:
