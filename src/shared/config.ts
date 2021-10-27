@@ -1,5 +1,5 @@
 const config = {
-	appName: 'Blog Seguridad',
+	appName: 'DigitalSec',
 	postsDir: 'posts'
 };
 
