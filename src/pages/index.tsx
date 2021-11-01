@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { sortPosts } from 'utils';
 import config from 'shared/config';
+import Header from 'components/home/Header';
 import PostCard from 'components/home/PostCard';
 import type { GetStaticProps } from 'next';
 import type Post from 'shared/models/post';
@@ -14,18 +15,21 @@ type PropType = {
 
 const Home = ({ posts }: PropType) => {
 	return (
-		<section className="py-5">
-			<div className="container px-5">
-				<h1 className="fw-bolder fs-3 mb-4">Publicaciones</h1>
-				<div className="row gx-5">
-					{posts.map((post) => (
-						<div key={post.slug} className="col-lg-4 col-md-6 mb-5">
-							<PostCard post={post} />
-						</div>
-					))}
+		<>
+			<Header />
+			<section id="posts" className="py-5">
+				<div className="container px-5">
+					<h2 className="fw-bolder fs-3 mb-4">Publicaciones</h2>
+					<div className="row gx-5">
+						{posts.map((post) => (
+							<div key={post.slug} className="col-lg-4 col-md-6 mb-5">
+								<PostCard post={post} />
+							</div>
+						))}
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

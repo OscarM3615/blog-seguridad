@@ -14,7 +14,7 @@ const Header = () => {
 								usuarios.
 							</p>
 
-							<Link href="/" passHref>
+							<Link href="/#posts" passHref>
 								<a className="btn btn-primary btn-lg">Leer artículos</a>
 							</Link>
 						</div>
