@@ -9,7 +9,7 @@ const NotFound = () => {
 				<title>Página no encontrada | {config.appName}</title>
 			</Head>
 
-			<header className="py-5">
+			<header className="py-5 min-vh-100">
 				<div className="container px-5">
 					<div className="row justify-content-center">
 						<div className="text-center my-5">
